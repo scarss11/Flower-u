@@ -69,7 +69,7 @@ const products = [
         id: 6,
         name: "Garden Carnation Mix",
         price: 35.00,
-        image: "https://images.unsplash.com/photo-1587814213271-7a68a018e6cb?w=800&h=800&fit=crop",
+        image: "https://images.unsplash.com/photo-1595167064433-e070d62d2d38?w=800&h=800&fit=crop",
         description: "Charming carnations in a variety of colors that last long and spread joy. A wonderful gift that keeps on giving.",
         category: "arrangements",
         specs: {
