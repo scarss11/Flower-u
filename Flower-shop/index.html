@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Blooms® - Flower Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <button onclick="goToHome()" class="logo">
+                        Our Blooms<sup>®</sup>
+                    </button>
+                    <nav class="nav-desktop">
+                        <button onclick="goToHome()" class="nav-link">HOME</button>
+                        <button onclick="goToGallery()" class="nav-link">GALLERY</button>
+                        <button onclick="goToAbout()" class="nav-link">ABOUT</button>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <button onclick="toggleCart()" class="cart-btn">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="cart-badge" id="cartBadge" style="display: none;">0</span>
+                    </button>
+                    <button onclick="toggleMenu()" class="menu-btn">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="homePage">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">
+                        We're Our Blooms® and we're here to help you say your most<br />lovely words.
+                    </h2>
+                    <div class="hero-badge">
+                        <p>Flowers For<br />Every Occasion</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section class="what-we-do">
+            <div class="container">
+                <h3 class="section-title">WHAT WE DO</h3>
+                
+                <!-- Gallery Grid -->
+                <div class="gallery-grid" id="homeGallery"></div>
+
+                <!-- Service Sections -->
+                <div class="services">
+                    <!-- Service 1 -->
+                    <div class="service-item">
+                        <div class="service-text">
+                            <div class="service-header">
+                                <div class="service-number">1</div>
+                                <h4 class="service-title">FLORAL<br />INSTALLATIONS</h4>
+                            </div>
+                            <p class="service-description">
+                                Create unforgettable moments with our custom floral installations. Perfect for weddings, events, and special celebrations that need that extra touch of natural beauty.
+                            </p>
+                        </div>
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&h=600&fit=crop" alt="Floral Installation">
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-item reverse">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=800&h=600&fit=crop" alt="Native Plants">
+                        </div>
+                        <div class="service-text">
+                            <div class="service-header">
+                                <div class="service-number">2</div>
+                                <h4 class="service-title">NATIVE PLANT<br />ARRANGEMENTS</h4>
+                            </div>
+                            <p class="service-description">
+                                Celebrate local flora with our carefully curated native plant arrangements. Sustainable, beautiful, and perfectly suited to your environment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-item">
+                        <div class="service-text">
+                            <div class="service-header">
+                                <div class="service-number">3</div>
+                                <h4 class="service-title">CUSTOM FLORAL<br />CONCEPTS</h4>
+                            </div>
+                            <p class="service-description">
+                                Have a vision? We bring it to life. Our team works closely with you to create bespoke floral designs that perfectly match your aesthetic and occasion.
+                            </p>
+                        </div>
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1487070183336-b863922373d4?w=800&h=600&fit=crop" alt="Custom Concepts">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Purple Section -->
+        <section class="purple-section">
+            <div class="container">
+                <div class="purple-content">
+                    <p class="purple-text">
+                        Discover how we can add a floral or nature-heavy feel to your next event and elevate your experience.
+                    </p>
+                    <button class="btn-contact">Contact</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="footer-hero">
+            <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=1600&h=800&fit=crop" alt="Flower background">
+            <div class="footer-overlay">
+                <h2 class="footer-logo">OB.</h2>
+            </div>
+            <div class="footer-left">Since 75</div>
+            <div class="footer-right">Sweet Flowers</div>
+        </section>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="galleryPage" style="display: none;">
+        <!-- Gallery Header -->
+        <section class="gallery-header">
+            <div class="container-narrow">
+                <h1 class="gallery-main-title">GALLERY</h1>
+                <p class="gallery-intro">Discover how we can add a touch of natural beauty to your next event.</p>
+            </div>
+        </section>
+
+        <!-- Gallery Masonry Grid -->
+        <section class="gallery-masonry">
+            <div class="container-narrow">
+                <div class="masonry-grid" id="fullGallery">
+                    <!-- Products will be rendered here -->
+                </div>
+
+                <!-- Service Cards -->
+                <div class="gallery-services">
+                    <div class="gallery-service-card">
+                        <h3 class="service-card-title">FLORAL<br>INSTALLATIONS</h3>
+                        <p class="service-card-text">Create unforgettable moments with our custom floral installations.</p>
+                    </div>
+
+                    <div class="gallery-service-card">
+                        <h3 class="service-card-title">NATIVE PLANT<br>ARRANGEMENTS</h3>
+                        <p class="service-card-text">Celebrate local flora with our carefully curated native plant arrangements.</p>
+                    </div>
+
+                    <div class="gallery-service-card">
+                        <h3 class="service-card-title">CUSTOM FLORAL<br>CONCEPTS</h3>
+                        <p class="service-card-text">Have a vision? We bring it to life with bespoke floral designs.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery CTA -->
+                <div class="gallery-cta">
+                    <p class="gallery-cta-text">Discover how we can add a touch of natural beauty to your next event.</p>
+                    <button class="btn-cta-yellow">Contact</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Footer -->
+        <section class="gallery-footer">
+            <div class="gallery-footer-overlay">
+                <h2 class="gallery-footer-logo">OB.</h2>
+            </div>
+            <div class="gallery-footer-left">Since 75</div>
+            <div class="gallery-footer-right">Sweet Flowers</div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="aboutPage" style="display: none;">
+        <!-- About Header -->
+        <section class="about-header">
+            <div class="container-narrow">
+                <h1 class="about-main-title">ABOUT</h1>
+            </div>
+        </section>
+
+        <!-- About Hero Image -->
+        <section class="about-hero-section">
+            <div class="container-narrow">
+                <div class="about-hero-image">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&h=800&fit=crop" alt="Our Blooms Story">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Story -->
+        <section class="about-story">
+            <div class="container-narrow">
+                <h2 class="about-story-title">Our Blooms was founded in honor of Lily Smith having a love of flowers and bringing joy to the world</h2>
+                
+                <div class="about-story-grid">
+                    <div class="about-story-image">
+                        <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=600&h=800&fit=crop" alt="Pink Flowers">
+                    </div>
+                    <div class="about-story-image">
+                        <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=600&h=800&fit=crop" alt="Peony">
+                    </div>
+                    <div class="about-story-image">
+                        <img src="https://images.unsplash.com/photo-1597848212624-e530bb28cc08?w=600&h=800&fit=crop" alt="White Tulip">
+                    </div>
+                </div>
+
+                <!-- Story Text -->
+                <div class="about-story-content">
+                    <p class="about-story-paragraph">
+                        Our story began in 1975, when Lily Smith opened a small flower stand on the corner of Main Street. What started as a passion project quickly blossomed into something much bigger—a place where people could find beauty, comfort, and joy through the language of flowers.
+                    </p>
+                    
+                    <p class="about-story-paragraph">
+                        Nearly five decades later, we continue Lily's legacy by creating arrangements that speak to the heart. Each bouquet tells a story, whether it's celebrating love, offering comfort, or simply brightening someone's day.
+                    </p>
+
+                    <p class="about-story-paragraph">
+                        We believe in the transformative power of flowers and the connections they help us create. From weddings to everyday moments, we're honored to be part of your most meaningful celebrations.
+                    </p>
+
+                    <p class="about-story-paragraph">
+                        Today, Our Blooms is more than a flower shop—it's a community. A place where artistry meets nature, and where every stem is selected with intention and care.
+                    </p>
+
+                    <p class="about-story-highlight">
+                        Every bouquet carries with it a dedication to quality and beauty that honors Lily's original vision.
+                    </p>
+                </div>
+
+                <!-- Large Featured Image -->
+                <div class="about-featured-image">
+                    <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=1200&h=800&fit=crop" alt="Pink Tulips">
+                </div>
+
+                <!-- More Content -->
+                <div class="about-story-content">
+                    <p class="about-story-paragraph">
+                        From botanical beginnings, discover how we've craft beauty with each arrangement and how our passion for flowers continues to bloom.
+                    </p>
+
+                    <p class="about-story-paragraph">
+                        Discover how we can add a floral or nature-heavy feel to your next event.
+                    </p>
+                </div>
+
+                <!-- Contact Button -->
+                <div class="about-contact-section">
+                    <button class="btn-cta-yellow">Contact</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Footer -->
+        <section class="about-footer">
+            <div class="about-footer-overlay">
+                <h2 class="about-footer-logo">OB.</h2>
+            </div>
+            <div class="about-footer-left">Since 75</div>
+            <div class="about-footer-right">Sweet Flowers</div>
+        </section>
+    </div>
+
+    <!-- Product Detail Page -->
+    <div id="productPage" style="display: none;">
+        <div class="product-container">
+            <!-- Back Button -->
+            <div class="container">
+                <button onclick="closeProduct()" class="back-btn">
+                    <i data-lucide="arrow-left"></i>
+                    <span>BACK TO GALLERY</span>
+                </button>
+            </div>
+
+            <!-- Product Content -->
+            <div class="container product-content">
+                <div class="product-grid">
+                    <!-- Product Image -->
+                    <div class="product-image-wrapper">
+                        <div class="product-image">
+                            <img id="productImage" src="" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h1 class="product-name" id="productName"></h1>
+                            <p class="product-description" id="productDescription"></p>
+                            <div class="product-price-box">
+                                <p class="product-price" id="productPrice"></p>
+                            </div>
+                        </div>
+
+                        <!-- Specifications -->
+                        <div class="product-specs" id="productSpecs"></div>
+
+                        <button onclick="addToCart()" class="btn-add-cart" id="addToCartBtn" disabled>
+                            SELECT ALL REQUIRED OPTIONS
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-section">
+                <div class="container">
+                    <h3 class="section-title">MORE FROM OUR COLLECTION</h3>
+                    <div class="related-grid" id="relatedProducts"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-overlay" onclick="toggleCart()"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2 class="cart-title">Your Cart</h2>
+                <button onclick="toggleCart()" class="cart-close">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <div class="cart-items" id="cartItems">
+                <div class="cart-empty">
+                    <i data-lucide="shopping-cart" style="width: 64px; height: 64px;"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+
+            <div class="cart-footer" id="cartFooter" style="display: none;">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="btn-checkout">CHECKOUT</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Inicializar Lucide icons cuando la página carga
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
