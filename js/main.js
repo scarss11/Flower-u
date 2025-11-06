@@ -3,102 +3,102 @@ let cart = [];
 let selectedProduct = null;
 let selectedSpecs = {};
 
-// Productos
+// Productos - Actualizados a ropa deportiva
 const products = [
     {
         id: 1,
-        name: "Sunflower Arrangement",
+        name: "Performance Running Shorts",
         price: 45.00,
-        image: "https://images.unsplash.com/photo-1597848212624-e530bb28cc08?w=800&h=800&fit=crop",
-        description: "Bright and cheerful sunflowers that bring warmth and joy to any space. Perfect for celebrations or to brighten someone's day.",
-        category: "arrangements",
+        image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&h=800&fit=crop",
+        description: "Lightweight running shorts with moisture-wicking technology. Perfect for training sessions and marathon running with maximum comfort.",
+        category: "running",
         specs: {
-            size: ["Small (5 stems)", "Medium (10 stems)", "Large (15 stems)"],
-            vase: ["Clear Glass", "Ceramic White", "Rustic"]
+            size: ["XS", "S", "M", "L", "XL"],
+            color: ["Black", "Navy Blue", "Charcoal", "Electric Blue"]
         }
     },
     {
         id: 2,
-        name: "Pink Peony Bundle",
+        name: "Compression Training Top",
         price: 52.00,
-        image: "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=800&h=800&fit=crop",
-        description: "Lush pink peonies that exude elegance and romance. These beautiful blooms are perfect for weddings and special occasions.",
-        category: "seasonal",
+        image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=800&h=800&fit=crop",
+        description: "High-performance compression top that supports muscles during intense workouts. Breathable fabric with strategic ventilation.",
+        category: "training",
         specs: {
-            size: ["Small (6 stems)", "Medium (12 stems)", "Large (18 stems)"],
-            vase: ["Clear Glass", "Ceramic White", "Rustic"]
+            size: ["XS", "S", "M", "L", "XL"],
+            color: ["Black", "White", "Red", "Royal Blue"]
         }
     },
     {
         id: 3,
-        name: "White Rose Elegance",
-        price: 48.00,
-        image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800&h=800&fit=crop",
-        description: "Classic white roses symbolizing purity and grace. A timeless choice for any occasion that calls for sophistication.",
-        category: "roses",
+        name: "Yoga Pro Leggings",
+        price: 68.00,
+        image: "https://images.unsplash.com/photo-1594736797933-d0d69c3bc5db?w=800&h=800&fit=crop",
+        description: "Four-way stretch leggings with high waist support. Perfect for yoga, pilates, and low-impact training with maximum flexibility.",
+        category: "yoga",
         specs: {
-            size: ["Small (9 roses)", "Medium (18 roses)", "Large (24 roses)"],
-            vase: ["Clear Glass", "Ceramic White", "Rustic"]
+            size: ["XS", "S", "M", "L", "XL"],
+            color: ["Black", "Dark Grey", "Forest Green", "Deep Purple"]
         }
     },
     {
         id: 4,
-        name: "Tulip Collection",
-        price: 38.00,
-        image: "https://images.unsplash.com/photo-1520763185298-1b434c919102?w=800&h=800&fit=crop",
-        description: "Fresh tulips in vibrant colors that celebrate spring and new beginnings. Perfect for adding a pop of color to any room.",
-        category: "seasonal",
+        name: "Training Hoodie",
+        price: 75.00,
+        image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&h=800&fit=crop",
+        description: "Technical hoodie with thermal regulation for cool weather training. Features thumb holes and zippered pockets.",
+        category: "training",
         specs: {
-            size: ["Small (8 stems)", "Medium (15 stems)", "Large (20 stems)"],
-            vase: ["Clear Glass", "Ceramic White", "Rustic"]
+            size: ["XS", "S", "M", "L", "XL"],
+            color: ["Charcoal", "Navy", "Burgundy", "Olive Green"]
         }
     },
     {
         id: 5,
-        name: "Mixed Spring Bouquet",
-        price: 42.00,
-        image: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=800&h=800&fit=crop",
-        description: "A delightful mix of seasonal flowers that brings the beauty of spring into your home. Each bouquet is unique and special.",
-        category: "arrangements",
+        name: "Running Jacket",
+        price: 89.00,
+        image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&h=800&fit=crop",
+        description: "Wind and water resistant running jacket with reflective elements. Perfect for early morning or evening runs.",
+        category: "running",
         specs: {
-            size: ["Small", "Medium", "Large"],
-            vase: ["Clear Glass", "Ceramic White", "Rustic"]
+            size: ["XS", "S", "M", "L", "XL"],
+            color: ["Black/Reflective", "Electric Blue", "Safety Yellow", "Dark Grey"]
         }
     },
     {
         id: 6,
-        name: "Garden Carnation Mix",
-        price: 35.00,
-        image: "https://images.unsplash.com/photo-1595167064433-e070d62d2d38?w=800&h=800&fit=crop",
-        description: "Charming carnations in a variety of colors that last long and spread joy. A wonderful gift that keeps on giving.",
-        category: "arrangements",
+        name: "Training Shorts",
+        price: 42.00,
+        image: "https://images.unsplash.com/photo-1506629905607-e48b0e67d879?w=800&h=800&fit=crop",
+        description: "Versatile training shorts with built-in compression liner. Ideal for cross-training, gym sessions, and recreational sports.",
+        category: "training",
         specs: {
-            size: ["Small", "Medium", "Large"],
-            vase: ["Clear Glass", "Ceramic White", "Rustic"]
+            size: ["XS", "S", "M", "L", "XL"],
+            color: ["Black", "Navy", "Dark Red", "Charcoal"]
         }
     },
     {
         id: 7,
-        name: "Lavender Dreams",
-        price: 40.00,
-        image: "https://images.unsplash.com/photo-1595814433015-e2a91c83a0b8?w=800&h=800&fit=crop",
-        description: "Soothing lavender stems that bring calm and tranquility. Perfect for creating a peaceful atmosphere.",
-        category: "seasonal",
+        name: "Performance Tank Top",
+        price: 38.00,
+        image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=800&h=800&fit=crop",
+        description: "Lightweight tank top with racerback design for maximum mobility. Perfect for warm weather training and gym sessions.",
+        category: "training",
         specs: {
-            size: ["Small", "Medium", "Large"],
-            vase: ["Clear Glass", "Ceramic White", "Rustic"]
+            size: ["XS", "S", "M", "L", "XL"],
+            color: ["White", "Black", "Grey", "Royal Blue"]
         }
     },
     {
         id: 8,
-        name: "Red Rose Romance",
-        price: 55.00,
-        image: "https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=800&h=800&fit=crop",
-        description: "Classic red roses that speak the language of love. The ultimate romantic gesture for that special someone.",
-        category: "roses",
+        name: "Compression Leggings",
+        price: 72.00,
+        image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&h=800&fit=crop",
+        description: "High-compression leggings with sculpting fit and sweat-wicking technology. Ideal for intense training and running.",
+        category: "training",
         specs: {
-            size: ["Small (12 roses)", "Medium (24 roses)", "Large (36 roses)"],
-            vase: ["Clear Glass", "Ceramic White", "Rustic"]
+            size: ["XS", "S", "M", "L", "XL"],
+            color: ["Black", "Dark Grey", "Navy", "Burgundy"]
         }
     }
 ];
@@ -216,7 +216,7 @@ function renderProductSpecs() {
 
     const labels = {
         size: 'Size',
-        vase: 'Vase Type'
+        color: 'Color'
     };
 
     let html = '';
@@ -244,12 +244,12 @@ function renderProductSpecs() {
 
     html += `
         <div class="spec-group">
-            <label class="spec-label">Dedication (Optional)</label>
+            <label class="spec-label">Customization (Optional)</label>
             <textarea 
                 class="dedication-input"
-                placeholder="Write your special message here..."
+                placeholder="Add any customization requests or notes..."
                 rows="4"
-                oninput="selectSpec('dedication', this.value)"
+                oninput="selectSpec('customization', this.value)"
             ></textarea>
         </div>
     `;
@@ -266,7 +266,7 @@ function renderProductSpecs() {
 function selectSpec(specType, value) {
     selectedSpecs[specType] = value;
     
-    if (specType !== 'dedication') {
+    if (specType !== 'customization') {
         renderProductSpecs();
     }
     
@@ -368,10 +368,10 @@ function renderCart() {
     } else {
         cartItems.innerHTML = cart.map(item => {
             const specs = Object.entries(item.selectedSpecs)
-                .filter(([key, value]) => key !== 'dedication' || value)
+                .filter(([key, value]) => key !== 'customization' || value)
                 .map(([key, value]) => {
-                    const labels = { size: 'Size', vase: 'Vase', dedication: 'Message' };
-                    const displayValue = key === 'dedication' && value ? value.substring(0, 30) + '...' : value;
+                    const labels = { size: 'Size', color: 'Color', customization: 'Notes' };
+                    const displayValue = key === 'customization' && value ? value.substring(0, 30) + '...' : value;
                     return `
                         <div class="cart-item-spec">
                             <strong>${labels[key]}:</strong> ${displayValue}
