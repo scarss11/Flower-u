@@ -7,98 +7,98 @@ let selectedSpecs = {};
 const products = [
     {
         id: 1,
-        name: "Performance Running Shorts",
+        name: "Shorts de Rendimiento para Correr",
         price: 45.00,
         image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&h=800&fit=crop",
-        description: "Lightweight running shorts with moisture-wicking technology. Perfect for training sessions and marathon running with maximum comfort.",
-        category: "running",
+        description: "Shorts ligeros para correr con tecnología que absorbe la humedad. Perfecto para sesiones de entrenamiento y carreras de maratón con máxima comodidad.",
+        category: "correr",
         specs: {
             size: ["XS", "S", "M", "L", "XL"],
-            color: ["Black", "Navy Blue", "Charcoal", "Electric Blue"]
+            color: ["Negro", "Azul Marino", "Carbón", "Azul Eléctrico"]
         }
     },
     {
         id: 2,
-        name: "Compression Training Top",
+        name: "Top de Compresión para Entrenamiento",
         price: 52.00,
         image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=800&h=800&fit=crop",
-        description: "High-performance compression top that supports muscles during intense workouts. Breathable fabric with strategic ventilation.",
-        category: "training",
+        description: "Top de compresión de alto rendimiento que apoya los músculos durante entrenamientos intensos. Tela transpirable con ventilación estratégica.",
+        category: "entrenamiento",
         specs: {
             size: ["XS", "S", "M", "L", "XL"],
-            color: ["Black", "White", "Red", "Royal Blue"]
+            color: ["Negro", "Blanco", "Rojo", "Azul Real"]
         }
     },
     {
         id: 3,
-        name: "Yoga Pro Leggings",
+        name: "Leggings Pro de Yoga",
         price: 68.00,
         image: "https://images.unsplash.com/photo-1594736797933-d0d69c3bc5db?w=800&h=800&fit=crop",
-        description: "Four-way stretch leggings with high waist support. Perfect for yoga, pilates, and low-impact training with maximum flexibility.",
+        description: "Leggings con elasticidad en cuatro direcciones y soporte de cintura alta. Perfecto para yoga, pilates y entrenamiento de bajo impacto con máxima flexibilidad.",
         category: "yoga",
         specs: {
             size: ["XS", "S", "M", "L", "XL"],
-            color: ["Black", "Dark Grey", "Forest Green", "Deep Purple"]
+            color: ["Negro", "Gris Oscuro", "Verde Bosque", "Púrpura Profundo"]
         }
     },
     {
         id: 4,
-        name: "Training Hoodie",
+        name: "Sudadera de Entrenamiento",
         price: 75.00,
         image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&h=800&fit=crop",
-        description: "Technical hoodie with thermal regulation for cool weather training. Features thumb holes and zippered pockets.",
-        category: "training",
+        description: "Sudadera técnica con regulación térmica para entrenamientos en clima frío. Cuenta con agujeros para los pulgares y bolsillos con cremallera.",
+        category: "entrenamiento",
         specs: {
             size: ["XS", "S", "M", "L", "XL"],
-            color: ["Charcoal", "Navy", "Burgundy", "Olive Green"]
+            color: ["Carbón", "Marino", "Borgoña", "Verde Oliva"]
         }
     },
     {
         id: 5,
-        name: "Running Jacket",
+        name: "Chaqueta para Correr",
         price: 89.00,
         image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&h=800&fit=crop",
-        description: "Wind and water resistant running jacket with reflective elements. Perfect for early morning or evening runs.",
-        category: "running",
+        description: "Chaqueta resistente al viento y al agua con elementos reflectantes. Perfecta para carreras temprano en la mañana o por la noche.",
+        category: "correr",
         specs: {
             size: ["XS", "S", "M", "L", "XL"],
-            color: ["Black/Reflective", "Electric Blue", "Safety Yellow", "Dark Grey"]
+            color: ["Negro/Reflectante", "Azul Eléctrico", "Amarillo de Seguridad", "Gris Oscuro"]
         }
     },
     {
         id: 6,
-        name: "Training Shorts",
+        name: "Shorts de Entrenamiento",
         price: 42.00,
         image: "https://images.unsplash.com/photo-1506629905607-e48b0e67d879?w=800&h=800&fit=crop",
-        description: "Versatile training shorts with built-in compression liner. Ideal for cross-training, gym sessions, and recreational sports.",
-        category: "training",
+        description: "Shorts versátiles de entrenamiento con forro de compresión incorporado. Ideal para entrenamiento cruzado, sesiones de gimnasio y deportes recreativos.",
+        category: "entrenamiento",
         specs: {
             size: ["XS", "S", "M", "L", "XL"],
-            color: ["Black", "Navy", "Dark Red", "Charcoal"]
+            color: ["Negro", "Marino", "Rojo Oscuro", "Carbón"]
         }
     },
     {
         id: 7,
-        name: "Performance Tank Top",
+        name: "Camiseta sin Mangas de Rendimiento",
         price: 38.00,
         image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=800&h=800&fit=crop",
-        description: "Lightweight tank top with racerback design for maximum mobility. Perfect for warm weather training and gym sessions.",
-        category: "training",
+        description: "Camiseta sin mangas ligera con diseño de espalda deportiva para máxima movilidad. Perfecta para entrenamientos en clima cálido y sesiones de gimnasio.",
+        category: "entrenamiento",
         specs: {
             size: ["XS", "S", "M", "L", "XL"],
-            color: ["White", "Black", "Grey", "Royal Blue"]
+            color: ["Blanco", "Negro", "Gris", "Azul Real"]
         }
     },
     {
         id: 8,
-        name: "Compression Leggings",
+        name: "Leggings de Compresión",
         price: 72.00,
         image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&h=800&fit=crop",
-        description: "High-compression leggings with sculpting fit and sweat-wicking technology. Ideal for intense training and running.",
-        category: "training",
+        description: "Leggings de alta compresión con ajuste moldeador y tecnología que absorbe el sudor. Ideal para entrenamiento intenso y carreras.",
+        category: "entrenamiento",
         specs: {
             size: ["XS", "S", "M", "L", "XL"],
-            color: ["Black", "Dark Grey", "Navy", "Burgundy"]
+            color: ["Negro", "Gris Oscuro", "Marino", "Borgoña"]
         }
     }
 ];
@@ -215,7 +215,7 @@ function renderProductSpecs() {
     if (!specsContainer || !selectedProduct) return;
 
     const labels = {
-        size: 'Size',
+        size: 'Talla',
         color: 'Color'
     };
 
@@ -244,10 +244,10 @@ function renderProductSpecs() {
 
     html += `
         <div class="spec-group">
-            <label class="spec-label">Customization (Optional)</label>
+            <label class="spec-label">Personalización (Opcional)</label>
             <textarea 
                 class="dedication-input"
-                placeholder="Add any customization requests or notes..."
+                placeholder="Agrega solicitudes de personalización o notas..."
                 rows="4"
                 oninput="selectSpec('customization', this.value)"
             ></textarea>
@@ -283,10 +283,10 @@ function updateAddToCartButton() {
 
     if (allSelected) {
         btn.disabled = false;
-        btn.textContent = 'ADD TO CART';
+        btn.textContent = 'AGREGAR AL CARRITO';
     } else {
         btn.disabled = true;
-        btn.textContent = 'SELECT ALL REQUIRED OPTIONS';
+        btn.textContent = 'SELECCIONA TODAS LAS OPCIONES REQUERIDAS';
     }
 }
 
@@ -312,7 +312,7 @@ function addToCart() {
     updateCartBadge();
     renderProductSpecs();
     
-    alert('Product added to cart!');
+    alert('¡Producto agregado al carrito!');
 }
 
 // Renderizar productos relacionados
@@ -349,7 +349,7 @@ function toggleCart() {
 
 // Toggle menú móvil
 function toggleMenu() {
-    alert('Mobile menu - Implementar menú desplegable');
+    alert('Menú móvil - Implementar menú desplegable');
 }
 
 // Renderizar carrito
@@ -361,7 +361,7 @@ function renderCart() {
         cartItems.innerHTML = `
             <div class="cart-empty">
                 <i data-lucide="shopping-cart" style="width: 64px; height: 64px;"></i>
-                <p>Your cart is empty</p>
+                <p>Tu carrito está vacío</p>
             </div>
         `;
         cartFooter.style.display = 'none';
@@ -370,7 +370,7 @@ function renderCart() {
             const specs = Object.entries(item.selectedSpecs)
                 .filter(([key, value]) => key !== 'customization' || value)
                 .map(([key, value]) => {
-                    const labels = { size: 'Size', color: 'Color', customization: 'Notes' };
+                    const labels = { size: 'Talla', color: 'Color', customization: 'Notas' };
                     const displayValue = key === 'customization' && value ? value.substring(0, 30) + '...' : value;
                     return `
                         <div class="cart-item-spec">
